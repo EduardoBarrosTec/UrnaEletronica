@@ -28,7 +28,7 @@ int votar(struct Candidato candidatos[], int totalCandidatos) {
 
 void apurarVotos(struct Candidato candidatos[], int totalCandidatos) {
     printf("\nResultado da apuração de votos:\n");
-    for (int i = 0; i < totalCandidatos; i++) {  // Corrigido para i < totalCandidatos
+    for (int i = 0; i < totalCandidatos; i++) {  
         printf("%s (Número %d): %d votos\n", candidatos[i].nome, candidatos[i].numero, candidatos[i].votos);
     }
 }
@@ -40,8 +40,8 @@ void percentualVotos(struct Candidato candidatos[], int totalCandidatos, int tot
     }
     printf("\nPercentual de votos:\n");
     for (int i = 0; i < totalCandidatos; i++) {
-        float percentual = (float)candidatos[i].votos / totalVotos * 100;  // Corrigido o nome e cálculo da variável
-        printf("%s: %.2f%% dos votos\n", candidatos[i].nome, percentual);   // Usando a variável correta
+        float percentual = (float)candidatos[i].votos / totalVotos * 100;  
+        printf("%s: %.2f%% dos votos\n", candidatos[i].nome, percentual);  
     }
 }
 
@@ -75,6 +75,6 @@ int main() {
                 printf("Opção inválida!\n");
                 break;
         }
-    } while (opcao != 4);  // Removido o ponto e vírgula após o while
+    } while (opcao != 4);  
     return 0;
 }
